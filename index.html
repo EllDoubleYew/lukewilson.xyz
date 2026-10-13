@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Welcome to Luke's personal homepage.">
+  <title>Luke's Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>The Personal Page of:</h1>
+    <h2>Welcome to Luke's Homepage</h2>
+  </header>
+
+  <div class="page-columns">
+    <main>
+      <section class="introduction" aria-labelledby="about-title">
+        <div class="about-row">
+          <figure>
+            <img class="portrait" src="luke-yearbook-v2.jpg" width="120" height="164" alt="Luke's yearbook-style portrait">
+            <figcaption><a class="email-link" href="mailto:hello@lukewilson.xyz">E-mail me!</a></figcaption>
+          </figure>
+          <div class="about-copy">
+            <h3 id="about-title">About Me:</h3>
+            <p>Hello! <img class="hello-neko" src="stamps/nekofight.gif" width="20" height="20" alt="Animated cat"><br>My name is Luke and I am a computer geek who works in infrastructure security. Thanks for checking out my little corner of the internet.</p>
+          </div>
+        </div>
+
+        <section class="hobbies" aria-labelledby="hobbies-title">
+          <h3 id="hobbies-title">Hobbies &amp; Interests:</h3>
+          <p>Studying Languages, Religion, and Culture. Global Politics. Technology and Philosophy. Reading (and writing) long essays.</p>
+        </section>
+      </section>
+
+      <section class="blog-posts" aria-labelledby="blog-title">
+        <h3 id="blog-title">Blog Posts:</h3>
+        <!-- BLOG-LIST:START -->
+        <ul class="blog-list">
+          <li><a href="blogs/embracing-the-goodweb.html">Embracing the Goodweb</a> <time class="post-date" datetime="2026-10-13">2026-10-13</time></li>
+        </ul>
+        <!-- BLOG-LIST:END -->
+      </section>
+    </main>
+
+    <aside aria-labelledby="links-title">
+      <h3 id="links-title">Favorite Links:</h3>
+      <a href="https://news.ycombinator.com/">Hacker News</a><br>
+      <a href="https://www.bbc.com/">BBC</a><br>
+      <a href="https://web.archive.org/">Wayback Machine</a><br>
+      <a href="https://infinitemac.org/">Infinite Mac</a>
+    </aside>
+  </div>
+  <footer class="stamp-footer" aria-label="Old web stamps and animated decorations">
+    <img class="stamp-divider" src="stamps/cross.png" width="607" height="61" alt="">
+    <div class="stamp-pile">
+      <img src="stamps/5gdogstamp.png" width="99" height="56" alt="5G dog stamp">
+      <img src="stamps/got_html.gif" width="88" height="31" alt="Got HTML?">
+      <img src="stamps/obscurestamp.gif" width="99" height="56" alt="I support obscure things you've never heard of">
+      <img src="stamps/bible.png" width="66" height="44" alt="Bible">
+      <img src="stamps/steam.gif" width="88" height="31" alt="Play with Steam">
+      <img src="stamps/videogamesstamp.gif" width="99" height="56" alt="I love video games">
+      <img src="stamps/pepsi.gif" width="100" height="31" alt="This site best viewed with Pepsi">
+      <img src="stamps/nocookies.gif" width="88" height="31" alt="No cookies?">
+      <img src="stamps/vocaloidstamp.gif" width="88" height="31" alt="Vocaloid now!">
+      <img src="stamps/onionlink1098.gif" width="88" height="31" alt="The Onion">
+      <img src="stamps/wii.gif" width="88" height="31" alt="Wii">
+    </div>
+  </footer>
+  <img class="corner-character" src="stamps/ff266dba.gif" width="90" height="90" alt="Animated cartoon character">
+  <div class="toad-lane" aria-hidden="true">
+    <img id="scrolling-toad" src="stamps/toad.png" width="28" height="30" alt="">
+  </div>
+  <script src="toad.js" defer></script>
+</body>
+</html>

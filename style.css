@@ -1,0 +1,152 @@
+/* The original border stays at its native size, just like a 90s background GIF. */
+html {
+  min-height: 100%;
+  background: #fff url("personalb.gif") no-repeat left top;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font: 13px/17px Arial, Helvetica, sans-serif;
+}
+
+h1, h3 {
+  color: #10065e;
+  font-family: "Century Gothic", "Trebuchet MS", sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  margin: 0 0 0 41px;
+  height: 50px;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+h2 {
+  margin: 5px 0 8px 83px;
+  font-size: 19px;
+  line-height: 25px;
+}
+
+h3 {
+  margin: 0 0 4px;
+  font-size: 19px;
+  line-height: 23px;
+  letter-spacing: .4px;
+}
+
+p { margin: 0; }
+a { color: #00f; }
+a:visited { color: #551a8b; }
+a:focus-visible { outline: 2px dotted #10065e; outline-offset: 3px; }
+
+.page-columns {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 395px 170px;
+  margin-left: 83px;
+  min-height: 0;
+}
+
+main { min-width: 0; }
+.introduction { padding: 0 22px 10px; }
+.about-row { display: flex; gap: 23px; }
+figure { flex: 0 0 124px; margin: 3px 0 0; }
+.portrait {
+  display: block;
+  width: 120px;
+  height: 164px;
+  margin-left: 4px;
+}
+figcaption { margin-top: 7px; text-align: center; }
+.email-link {
+  color: #10065e;
+  font: bold 19px/24px "Century Gothic", "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.about-copy { flex: 1; }
+.hello-neko { vertical-align: middle; image-rendering: pixelated; }
+.corner-character {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+.toad-lane {
+  position: fixed;
+  inset: auto 0 0;
+  height: 30px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 3;
+}
+#scrolling-toad {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(100vw);
+  image-rendering: pixelated;
+  will-change: transform;
+}
+.hobbies { margin-top: 12px; }
+.blog-posts { border-top: 4px solid #739aff; padding: 17px 10px 0 22px; }
+.blog-list { margin: 7px 0 0; padding-left: 17px; }
+.blog-list li { margin-bottom: 8px; }
+.post-date { color: #555; font-size: 11px; }
+.blog-article { padding: 0 22px 24px; }
+.blog-article p { margin-top: 16px; }
+.blog-article .post-date { margin-top: 0; }
+.blog-article h3 { margin-top: 20px; }
+.blog-article .back-link { margin-top: 24px; }
+aside { border-left: 4px solid #739aff; padding-left: 13px; }
+aside h3 { white-space: nowrap; }
+
+/* A sticky footer in normal flow: stays below the text, fills short screens. */
+.stamp-footer {
+  width: min(760px, calc(100% - 105px));
+  margin: auto 0 0 83px;
+  padding: 12px 0 22px;
+}
+.stamp-divider {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 6px;
+}
+.stamp-pile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 9px 12px;
+  padding: 8px;
+}
+.stamp-pile img {
+  flex: 0 0 auto;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+/* Keep the original desktop composition; allow the columns to stack on phones. */
+@media (max-width: 620px) {
+  h2 { max-width: calc(100vw - 95px); }
+  .page-columns { grid-template-columns: minmax(0, 395px); margin-right: 12px; }
+  aside { border-left: 0; border-top: 4px solid #739aff; margin-top: 24px; padding: 16px 22px; }
+  .blog-posts { min-height: 160px; }
+}
+@media (max-width: 430px) {
+  h1 { font-size: 24px; letter-spacing: 0; }
+  .introduction { padding-left: 14px; padding-right: 8px; }
+  .about-row { flex-wrap: wrap; gap: 12px; }
+  .about-copy { flex-basis: 100%; }
+  .blog-posts, .blog-article { padding-left: 14px; }
+}
