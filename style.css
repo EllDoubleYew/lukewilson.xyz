@@ -109,6 +109,14 @@ figcaption { margin-top: 7px; text-align: center; }
 .blog-article .back-link { margin-top: 24px; }
 aside { border-left: 4px solid #739aff; padding-left: 13px; }
 aside h3 { white-space: nowrap; }
+.christmas-countdown { margin-top: 24px; }
+.christmas-countdown .cd_body {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+}
+.christmas-countdown .cd_body .title { font-size: 16px; }
+.christmas-countdown .cd_body p { font-size: 12px; margin: 8px 0; }
 
 /* A sticky footer in normal flow: stays below the text, fills short screens. */
 .stamp-footer {
