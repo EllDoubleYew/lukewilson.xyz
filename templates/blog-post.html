@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="blog-title" content="{{TITLE}}">
+  <meta name="blog-date" content="{{DATE}}">
+  <meta name="blog-published" content="{{PUBLISHED}}">
+  <title>{{TITLE}} | Luke's Homepage</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>The Personal Page of:</h1>
+    <h2>Luke's Blog</h2>
+  </header>
+  <div class="page-columns">
+    <main>
+      <article class="blog-article">
+        <h3>{{TITLE}}</h3>
+        <p class="post-date"><time datetime="{{DATE}}">{{DISPLAY_DATE}}</time></p>
+        <div class="post-content">
+{{BODY}}
+        </div>
+        <p class="back-link"><a href="../index.html">&lt;&lt; Back to Luke's Homepage</a></p>
+      </article>
+    </main>
+    <aside aria-labelledby="links-title">
+      <p class="site-nav"><a href="../photos.html">Photos</a></p>
+      <h3 id="links-title">Favorite Links:</h3>
+      <a href="https://news.ycombinator.com/">Hacker News</a><br>
+      <a href="https://www.bbc.com/">BBC</a><br>
+      <a href="https://web.archive.org/">Wayback Machine</a><br>
+      <a href="https://infinitemac.org/">Infinite Mac</a>
+      <p style="margin-top: 20px"><a href="mailto:hello@lukewilson.xyz">E-mail me!</a></p>
+    </aside>
+  </div>
+</body>
+</html>

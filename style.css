@@ -109,6 +109,21 @@ figcaption { margin-top: 7px; text-align: center; }
 .blog-article .back-link { margin-top: 24px; }
 aside { border-left: 4px solid #739aff; padding-left: 13px; }
 aside h3 { white-space: nowrap; }
+.site-nav { margin-bottom: 16px; }
+.post-content h1, .post-content h2 {
+  margin: 20px 0 8px;
+  height: auto;
+  font: normal 21px/1.3 "Century Gothic", "Trebuchet MS", sans-serif;
+  color: #10065e;
+  letter-spacing: normal;
+  white-space: normal;
+}
+.post-content h2 { font-size: 19px; }
+.post-content img { max-width: 100%; height: auto; }
+.post-content pre { overflow-x: auto; padding: 8px; background: #eee; }
+.post-content blockquote { margin: 16px 0; padding-left: 12px; border-left: 3px solid #739aff; }
+.post-content table { display: block; overflow-x: auto; border-collapse: collapse; margin-top: 16px; }
+.post-content th, .post-content td { border: 1px solid #739aff; padding: 4px; }
 .christmas-countdown { margin-top: 24px; }
 .christmas-countdown .cd_body {
   box-sizing: border-box;

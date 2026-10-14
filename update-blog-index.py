@@ -46,11 +46,12 @@ def main():
         published = parser.metadata.get("blog-date", "")
         if published:
             date.fromisoformat(published)  # Fail clearly on invalid dates.
-        posts.append((published, title, path.name))
+        timestamp = parser.metadata.get("blog-published", "")
+        posts.append((published, timestamp, title, path.name))
 
-    posts.sort(key=lambda post: (post[0], post[2]), reverse=True)
+    posts.sort(key=lambda post: (post[0], post[1], post[3]), reverse=True)
     lines = ['        <ul class="blog-list">']
-    for published, title, filename in posts:
+    for published, timestamp, title, filename in posts:
         stamp = (f' <time class="post-date" datetime="{published}">'
                  f'{published}</time>') if published else ""
         lines.append(f'          <li><a href="blogs/{quote(filename, safe="")}">'
