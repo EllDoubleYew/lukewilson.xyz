@@ -59,13 +59,14 @@ def main():
     lines.append("        </ul>" if posts else "        </ul>\n        <p>No posts yet.</p>")
 
     homepage = ROOT / "index.html"
-    original = homepage.read_text(encoding="utf-8")
+    original = homepage.read_bytes().decode("utf-8")
     if original.count(START) != 1 or original.count(END) != 1:
         raise ValueError("Homepage must contain exactly one pair of BLOG-LIST markers")
     before, rest = original.split(START)
     _, after = rest.split(END)
-    homepage.write_text(before + START + "\n" + "\n".join(lines) + "\n        " + END + after,
-                        encoding="utf-8")
+    newline = "\r\n" if rest.startswith("\r\n") else "\n"
+    links = ("\n" + "\n".join(lines) + "\n        ").replace("\n", newline)
+    homepage.write_bytes((before + START + links + END + after).encode("utf-8"))
     print(f"Updated homepage with {len(posts)} blog post(s).")
 
 
