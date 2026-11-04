@@ -110,6 +110,20 @@ figcaption { margin-top: 7px; text-align: center; }
 aside { border-left: 4px solid #739aff; padding-left: 13px; }
 aside h3 { white-space: nowrap; }
 .site-nav { margin-bottom: 16px; }
+.photo-gallery { margin: 0 0 24px 83px; }
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  gap: 14px;
+}
+.photo-grid figure { margin: 0; }
+.photo-grid img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  outline: 1px solid #739aff;
+}
 .post-content h1, .post-content h2 {
   margin: 20px 0 8px;
   height: auto;

@@ -2,7 +2,7 @@
 
 A buildless static personal website inspired by the supplied 1990s homepage.
 
-Open `index.html` in a browser, or serve this directory with any static HTTP server. Deploy the HTML, CSS, JavaScript, GIF/JPG assets, `blogs/`, and `stamps/` together. `photos.html` is a blank photo page linked from the homepage.
+Open `index.html` in a browser, or serve this directory with any static HTTP server. Deploy the HTML, CSS, JavaScript, GIF/JPG assets, `blogs/`, and `stamps/` together. `photos.html` is the photo gallery linked from the homepage.
 
 The original `personalb.gif` supplies the blue top and left border at its native size. Edit the text in `index.html` and the layout in `style.css`.
 
@@ -37,3 +37,11 @@ Both scripts locate the site using their own directory, so they also work when c
 The index script scans every HTML file directly inside `blogs/`, writes links into the marked area of `index.html`, and sorts dated posts newest first. It uses the document title when `blog-title` is omitted; undated posts appear after dated posts. The Bash scripts use the existing `update-blog-index.py` to generate the list.
 
 The published site stays entirely static and works when opened directly from disk. Blog links work with JavaScript disabled; Toad's animation uses local JavaScript. Browsers cannot reliably enumerate a static directory, so the local publishing tools generate the list before you push.
+
+## Adding photos
+
+```bash
+./upload-photo.sh "/mnt/c/path/to/My Photo.jpg"
+```
+
+The script copies the original image to `photos/` and adds it to the top of the gallery with today's local date. The grid displays the original image scaled to fit, and each image opens directly in a new tab. Commit the new image and updated `photos.html`, then push to publish them.
