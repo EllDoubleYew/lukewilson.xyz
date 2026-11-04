@@ -1,6 +1,7 @@
 # Luke's personal website
 
 - Keep the site entirely static and serverless. Cloudflare Pages serves the files from GitHub and redeploys when the remote repository updates.
+- Before every push to the remote repository, finish the requested work locally, summarize the changes, and ask "Ready to push?" Wait for the user's explicit confirmation before pushing.
 - Keep the site buildless. The publishing scripts write local static files. Preview the changes, then commit and push the generated files to publish them.
 - Run `./publish-blog-post.sh "/path/to/Post Title.md"` to generate a dated HTML post in `blogs/` and update the homepage blog links. Run `./update-blog-index.sh` after manually editing or removing posts.
 - Run `./upload-photo.sh "/path/to/My Photo.jpg"` to copy the original image into `photos/` and add it to the top of the dated grid in `photos.html`. Commit both files.
