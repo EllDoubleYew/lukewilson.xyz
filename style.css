@@ -189,6 +189,63 @@ aside h3 { white-space: nowrap; }
   image-rendering: pixelated;
 }
 
+.slot-stamp {
+  box-sizing: border-box;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 56px;
+  padding: 2px 5px;
+  border: 3px ridge #ffd76a;
+  background: #8b001c;
+  color: #ffe18b;
+  cursor: pointer;
+  font: bold 9px/11px "Courier New", monospace;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px #36000a;
+}
+.slot-stamp:disabled { cursor: wait; }
+.slot-stamp:focus-visible { outline: 2px dotted #10065e; outline-offset: 3px; }
+.slot-caption, .slot-message { display: block; white-space: nowrap; }
+.slot-reels { display: flex; gap: 2px; margin: 1px 0; }
+.slot-reels span {
+  flex: 1;
+  border: 1px inset #aaa;
+  background: #fff9dc;
+  color: #c00021;
+  font: bold 19px/21px Georgia, serif;
+}
+.slot-stamp.is-winner { background: #175a21; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.slot-coin-rain { position: fixed; inset: 0; z-index: 100; pointer-events: none; overflow: hidden; }
+.slot-coin {
+  position: absolute;
+  top: -26px;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid #b87800;
+  border-radius: 50%;
+  background: #ffd43b;
+  color: #996000;
+  text-align: center;
+  font: bold 15px/16px Georgia, serif;
+  box-shadow: inset 0 0 0 2px #ffec87;
+  animation: slot-coin-fall 1.2s linear both;
+}
+@keyframes slot-coin-fall {
+  to { transform: translate(var(--drift), calc(100vh + 52px)) rotate(540deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slot-coin-rain { display: none; }
+}
+
 /* Keep the original desktop composition; allow the columns to stack on phones. */
 @media (max-width: 620px) {
   h2 { max-width: calc(100vw - 95px); }
